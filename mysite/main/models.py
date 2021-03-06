@@ -1,4 +1,8 @@
 from django.db import models
+import datetime
+from partial_date import PartialDate
+from django import forms
+from phone_field import PhoneField
 
 # Create your models here.
 class ToDoList(models.Model):
@@ -15,11 +19,7 @@ class Item(models.Model):
     def __str__(self):
         return self.text
 
-        from django.db import models
-import datetime
-from partial_date import PartialDate
-from django import forms
-from phone_field import PhoneField
+
 
 
 class userID(models.Model):
