@@ -29,8 +29,8 @@ class userID(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=25, null=False, blank=False, unique=True)
     firstName = models.CharField(max_length = 25, null=False, blank=False)
-    lastName =  models.CharField(max_length = 25, null=False, blank=False)
-    email =  models.EmailField()
+    lastName = models.CharField(max_length = 25, null=False, blank=False)
+    email = models.EmailField()
     #pas = models.CharField(max_length=50, null=False, blank=False)
     #class UserForm(forms.ModelForm):
     #password = forms.CharField(widget=forms.PasswordInput)
