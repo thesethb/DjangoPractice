@@ -5,3 +5,7 @@ from .models import ToDoList, Item
 
 admin.site.register(ToDoList)
 admin.site.register(Item)
+#admin.site.register(User)
+#admin.site.register(userID)
+#admin.site.register(uBio)
+

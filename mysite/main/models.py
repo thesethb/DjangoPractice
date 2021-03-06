@@ -6,7 +6,7 @@ from phone_field import PhoneField
 
 # Create your models here.
 class ToDoList(models.Model):
-    name = models.CharField(max_length = 200)
+    uname = models.CharField(max_length = 200)
 
     def __str__(self):
         return self.name
@@ -19,10 +19,14 @@ class Item(models.Model):
     def __str__(self):
         return self.text
 
+class User(models.Model):
+    name = models.CharField(max_length=50)
 
-
+    def __str__(self):
+        return self.name
 
 class userID(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=25, null=False, blank=False, unique=True)
     firstName = models.CharField(max_length = 25, null=False, blank=False)
     lastName =  models.CharField(max_length = 25, null=False, blank=False)
@@ -31,7 +35,7 @@ class userID(models.Model):
     #class UserForm(forms.ModelForm):
     #password = forms.CharField(widget=forms.PasswordInput)
     #phone = PhoneField(null=False, blank=False, unique=True, help_text='Contact phone number')
-    phone = models.IntegerField(null=False, blank=False)
+    #phone = models.IntegerField(null=False, blank=False)
     #gradYear = models.IntegerField(_('year'), validators=[MinValueValidator(1984), max_value_current_year])
     #gradYear = PartialDate("2023")
     #gradYear.format('%Y')
@@ -49,7 +53,7 @@ class userID(models.Model):
  
 
 class uBio(models.Model):
-    user = models.ForeignKey(userID, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     meetMe = models.CharField(max_length=150, null=False, blank=False)
     department = models.CharField(max_length = 100, null=False, blank=False)
     title = models.CharField(max_length = 30, null=False, blank=False) 
