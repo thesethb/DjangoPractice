@@ -98,9 +98,3 @@ class uProjects(models.Model):
     #waiting on relational tables to import data from there
 
  #andrew_user = userID(username="andrewbregman", firstName="Andrew", lastName="bregman", email="andrew.bregman@westpoint.edu", phone=8563832480, gradYear="2023-5-23", company="D2")
- #andrew_user = userID( )
- #andrew_user=userID()
- #andrew_user=userID()
- #andrew_user=userID()
- #andrew_user=userID()
- #andrew_user.save()
